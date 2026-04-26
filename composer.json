@@ -1,0 +1,76 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "eGA Website CMS",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "cviebrock/eloquent-sluggable": "^9.0",
+        "filp/whoops": "^2.14",
+        "fruitcake/laravel-cors": "^3.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "intervention/image": "^2.5",
+        "laravel/framework": "^9.0",
+        "laravel/tinker": "^2.7",
+        "laravel/ui": "^3.4",
+        "laravelcollective/html": "^6.3",
+        "nesbot/carbon": "^2.59",
+        "spatie/laravel-activitylog": "^4.5",
+        "spatie/laravel-permission": "^5.5",
+        "symfony/translation": "^5.3"
+    },
+    "require-dev": {
+        "spatie/laravel-ignition": "^1.0",
+        "fzaninotto/faker": "^1.9.2",
+        "mockery/mockery": "^1.5.0",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "files": [
+            "app/Helpers/functions.php",
+            "app/Helpers/toggleLanguage.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}
+

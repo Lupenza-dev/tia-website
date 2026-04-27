@@ -1,0 +1,12 @@
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_find_program', 'Find Program', 'Tafuta Program', '2026-04-26 09:55:26', '2026-04-26 09:55:26');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_search_program_description', 'Search through our available programs and courses to find the right fit for you', 'Search through our available programs and courses to find the right fit for you', '2026-04-26 09:56:28', '2026-04-26 09:56:28');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_partners', 'Partners', 'Partners', '2026-04-26 09:59:44', '2026-04-26 09:59:44');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_alumnae_say', 'What Our Alumnae Say', 'What Our Alumnae Say', '2026-04-26 10:02:08', '2026-04-26 10:02:08');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_alumnae_text', 'Hear from our graduates about their experience at TIA', 'Hear from our graduates about their experience at TIA', '2026-04-26 10:03:42', '2026-04-26 10:03:42');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_our_campuses', ' Our Campuses', ' Our Campuses', '2026-04-26 10:05:40', '2026-04-26 10:05:40');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_our_visitor', 'Our Visitors', 'Wageni', '2026-04-26 10:07:24', '2026-04-26 10:07:24');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_today', 'Today', 'Leo', '2026-04-26 10:08:57', '2026-04-26 10:08:57');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_yesterday', 'Yesterday', 'Jana', '2026-04-26 10:08:57', '2026-04-26 10:08:57');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_this_week', 'This Week', 'Week Hii', '2026-04-26 10:08:57', '2026-04-26 10:08:57');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_this_month', 'This Month', 'Mwezi Huu', '2026-04-26 10:08:57', '2026-04-26 10:08:57');
+INSERT INTO `translations` (`id`, `keyword`, `en`, `sw`, `created_at`, `updated_at`) VALUES (NULL, 'lbl_this_year', 'This Year', 'Mwaka Huu', '2026-04-26 10:08:57', '2026-04-26 10:08:57');

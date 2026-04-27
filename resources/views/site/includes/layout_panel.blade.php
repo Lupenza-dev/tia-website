@@ -27,7 +27,7 @@
 
     {{-- Appearance --}}
     <div class="layout-section">
-      {{-- <div class="layout-section-title"><i class="fa fa-palette mr-2"></i> Appearance</div>
+      <div class="layout-section-title"><i class="fa fa-palette mr-2"></i> Appearance</div>
       <div class="layout-option-group">
         <button class="layout-option-btn active-option" data-theme="light">
           <i class="fa fa-sun mr-1"></i> Light
@@ -35,7 +35,7 @@
         <button class="layout-option-btn" data-theme="dark">
           <i class="fa fa-moon mr-1"></i> Dark
         </button>
-      </div> --}}
+      </div>
       {{-- <div class="layout-sub-label mt-3">Primary Colour</div>
       <div class="layout-color-row">
         <button class="layout-color-swatch active-swatch" data-primary="#2156a7" style="background:#2156a7" title="Blue"></button>

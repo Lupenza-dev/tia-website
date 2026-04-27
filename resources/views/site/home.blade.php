@@ -49,9 +49,10 @@
                 </div>
                 @endif
 
-                {{-- Announcements --}}
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="bg-white h-100 p-4" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #2156a7;">
+                {{-- Announcements + Events stacked --}}
+                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column">
+                    {{-- Announcements --}}
+                    <div class="bg-white p-4 mb-3" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #2156a7;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h6 class="font-weight-bold mb-0" style="color: #2156a7;">
                                 <i class="fa fa-bullhorn mr-2" style="color: #149246;"></i>Announcements
@@ -60,7 +61,7 @@
                                 View All <i class="fa fa-arrow-right ml-1"></i>
                             </a>
                         </div>
-                        @foreach ($recent_announcements->take(5) as $announcement)
+                        @foreach ($recent_announcements->take(4) as $announcement)
                         <a href="{{ url('announcements/' . $announcement->slug) }}" class="d-flex align-items-start py-2 text-decoration-none" style="border-bottom: 1px solid #eee;">
                             <div class="mr-3 mt-1 flex-shrink-0">
                                 <div class="d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; border-radius: 50%; background-color: rgba(20,146,70,0.1);">
@@ -73,6 +74,38 @@
                                 </p>
                                 <small class="text-muted" style="font-size: 12px;">
                                     <i class="fa fa-calendar-alt mr-1"></i>{{ date('d M, Y', strtotime($announcement->created_at)) }}
+                                </small>
+                            </div>
+                        </a>
+                        @endforeach
+                    </div>
+
+                    {{-- Events --}}
+                    <div class="bg-white p-4 flex-grow-1" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #efe923;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="font-weight-bold mb-0" style="color: #2156a7;">
+                                <i class="fa fa-calendar-check mr-2" style="color: #efe923;"></i>Upcoming Events
+                            </h6>
+                            <a href="{{ url('events') }}" class="font-weight-bold" style="color: #efe923; text-decoration: none; font-size: 13px;">
+                                View All <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                        @foreach ($events->take(3) as $event)
+                        <a href="{{ url('events/' . $event->slug) }}" class="d-flex align-items-start py-2 text-decoration-none" style="border-bottom: 1px solid #eee;">
+                            <div class="mr-3 flex-shrink-0 text-center" style="min-width: 46px;">
+                                <div style="background: linear-gradient(135deg, #2156a7, #1a4480); border-radius: 8px; padding: 4px 8px; line-height: 1.1;">
+                                    <span class="d-block font-weight-bold" style="font-size: 18px; color: #fff;">{{ date('d', strtotime($event->event_date)) }}</span>
+                                    <span class="d-block text-uppercase" style="font-size: 10px; color: rgba(255,255,255,0.8); letter-spacing: 0.05em;">{{ date('M', strtotime($event->event_date)) }}</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="mb-1 font-weight-bold" style="font-size: 13px; color: #333; line-height: 1.4;">
+                                    {!! str_limit(strip_tags($event->title), 70) !!}
+                                </p>
+                                <small class="text-muted" style="font-size: 11px;">
+                                    <i class="fa fa-clock mr-1" style="color: #efe923;"></i>{{ $event->event_time }}
+                                    <span class="mx-1">|</span>
+                                    <i class="fa fa-map-marker-alt mr-1" style="color: #efe923;"></i>{{ $event->location }}
                                 </small>
                             </div>
                         </a>
@@ -120,21 +153,21 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8 text-center mb-4 mb-md-0">
-                    <h4 class="text-white font-weight-bold mb-2">Find Your Program</h4>
-                    <p class="mb-4" style="color: rgba(255,255,255,0.85); font-size: 15px;">Search through our available programs and courses to find the right fit for you</p>
+                    <h4 class="text-white font-weight-bold mb-2">{{ label('lbl_find_program') }}</h4>
+                    <p class="mb-4" style="color: rgba(255,255,255,0.85); font-size: 15px;">{{ label('lbl_search_program_description') }}</p>
                     <form method="GET" action="{{ url('search') }}" class="d-flex justify-content-center">
                         <div class="input-group" style="max-width: 550px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-radius: 50px; overflow: hidden;">
                             <input type="text" name="q" class="form-control border-0 px-4 py-3" placeholder="Search programs..." style="font-size: 15px; height: auto;">
                             <div class="input-group-append">
                                 <button type="submit" class="btn px-4" style="background-color: #149246; color: #fff; border: none; font-weight: bold; font-size: 15px;">
-                                    <i class="fa fa-search mr-2"></i>Search
+                                    <i class="fa fa-search mr-2"></i>{{label('lbl_search')}}
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <h6 class="text-white font-weight-bold text-center mb-3">Our Partners</h6>
+                    <h6 class="text-white font-weight-bold text-center mb-3">{{ label('lbl_partners') }}</h6>
                     <div style="overflow: hidden; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 20px 0;">
                         <div style="display: flex; animation: marqueeLeft 15s linear infinite; white-space: nowrap;">
                             <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 1" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
@@ -168,13 +201,13 @@
         <div class="container position-relative" style="z-index: 1;">
             <div class="text-center mb-5">
                 {{-- <span class="d-inline-block px-3 py-1 mb-2" style="background: rgba(20,146,70,0.1); border-radius: 20px; color: #149246; font-size: 13px; font-weight: 600; letter-spacing: 1px;">TESTIMONIALS</span> --}}
-                <h3 class="font-weight-bold" style="color: #2156a7;">What Our Alumnae Say</h3>
+                <h3 class="font-weight-bold" style="color: #2156a7;">{{ label('lbl_alumnae_say')}}</h3>
                 <div class="d-flex align-items-center justify-content-center mt-2">
                     <div style="width: 40px; height: 2px; background-color: #2156a7;"></div>
                     <div style="width: 12px; height: 12px; border: 2px solid #149246; border-radius: 50%; margin: 0 8px;"></div>
                     <div style="width: 40px; height: 2px; background-color: #2156a7;"></div>
                 </div>
-                <p class="mt-2 text-muted" style="font-size: 14px;">Hear from our graduates about their experience at TIA</p>
+                <p class="mt-2 text-muted" style="font-size: 14px;">{{ label('lbl_alumnae_text')}}</p>
             </div>
             <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                 <div class="carousel-inner">

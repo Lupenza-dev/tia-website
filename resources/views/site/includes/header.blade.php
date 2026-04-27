@@ -49,10 +49,10 @@
           </div>
   
           <div class="col-8 text-center text-accent my-auto">
-            <h5 class="mb-1 d-none d-sm-block font-16 align-items-center">
+            <h5 class="mb-1 d-none d-sm-block font-16 align-items-center font-weight-bold">
               {!! (label("lbl_site_subtitle"))!!}
             </h5>  
-            <h5 class="mb-1 d-none d-sm-block font-16 align-items-center">
+            <h5 class="mb-1 d-none d-sm-block font-16 align-items-center font-weight-bold">
               {!! (label("lbl_site_sub_subtitle"))!!}
             </h5>  
             <h3 class="mb-1 align-items-center text-accent font-weight-bold font-40  lowercase" >            

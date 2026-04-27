@@ -37,10 +37,10 @@
                                 alt="{{ strip_tags($photo->content) }}">
                             {{-- Gradient overlay --}}
                             <div class="position-absolute w-100 h-100" style="top: 0; left: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.6) 100%);"></div>
-                            <div class="position-absolute w-100" style="background: linear-gradient(to right, rgba(33,86,167,0.85), rgba(20,146,70,0.75)); bottom: 0; left: 0; right: 0; padding: 14px 25px; z-index: 10; backdrop-filter: blur(3px);">
-                                <div class="container d-flex align-items-center">
-                                    <div style="width: 4px; height: 22px; background: #fff; border-radius: 2px; margin-right: 15px; flex-shrink: 0;"></div>
-                                    <a href="javascript:" class="d-block text-white" style="font-size: 15px; font-weight: 500; letter-spacing: 0.3px; line-height: 1.5;">{!! strip_tags($photo->content) !!}</a>
+                            <div class="position-absolute w-100" style="background: linear-gradient(to right, rgba(33,86,167,0.85), rgba(20,146,70,0.75)); bottom: 0; left: 0; right: 0; padding: 14px 25px 40px; z-index: 10; backdrop-filter: blur(3px);">
+                                <div class="container d-flex align-items-center slide-caption">
+                                    <div class="slide-accent" style="width: 4px; height: 22px; background: #fff; border-radius: 2px; margin-right: 15px; flex-shrink: 0;"></div>
+                                    <a href="javascript:" class="d-block text-white slide-text" style="font-size: 15px; font-weight: 500; letter-spacing: 0.3px; line-height: 1.5;">{!! strip_tags($photo->content) !!}</a>
                                 </div>
                             </div>
                         </div>
@@ -76,5 +76,26 @@
     }
     #homeCarousel .carousel-item {
         transition: opacity 0.8s ease-in-out !important;
+    }
+
+    /* Caption slide-in animation */
+    @keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-40px); }
+        to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes growDown {
+        from { opacity: 0; transform: scaleY(0); }
+        to   { opacity: 1; transform: scaleY(1); }
+    }
+    .carousel-item .slide-accent,
+    .carousel-item .slide-text {
+        opacity: 0;
+    }
+    .carousel-item.active .slide-accent {
+        animation: growDown 0.4s ease-out 0.3s forwards;
+        transform-origin: top;
+    }
+    .carousel-item.active .slide-text {
+        animation: slideInLeft 0.5s ease-out 0.5s forwards;
     }
 </style>

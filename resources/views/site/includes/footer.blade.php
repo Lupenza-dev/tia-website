@@ -107,7 +107,7 @@
       <div class="col-lg-5 px-0 px-xs-2 m-0">     
         <div class="row footer-content  row px-xs-2 px-3 pb-0 mb-0">  
           <div class="col-md-6 no-padding-sm text-center text-lg-left">
-            <h5 class="footer-heading"> Our Campuses </h5>    
+            <h5 class="footer-heading"> {{ label('lbl_our_campuses')}} </h5>    
             <div class="lines mb-4 d-flex justify-content-lg-between justify-content-center">
               <div class="col-3 bold-line " style="background:hsla(0, 0%, 100%, .9);"> </div>
               <div class="col-8 d-none bg-white thin-line"> </div>
@@ -156,7 +156,7 @@
           </div>
   
           <div class="col-md-6 no-padding-sm text-center mt-4 mt-md-0 text-lg-left">
-            <h5 class="footer-heading"> Our Visitors</h5> 
+            <h5 class="footer-heading"> {{ label('lbl_our_visitor') }} </h5> 
             {{-- <h5 class="footer-heading"> {{ label('lbl_social') }} </h5>  --}}
             <div class="lines mt-1 mb-4 d-flex justify-content-lg-between justify-content-center">
               <div class="col-3 bold-line " style="background:hsla(0, 0%, 100%, .9);"> </div>
@@ -168,35 +168,35 @@
                 <i class="fa fa-calendar-day vc-icon"></i>
                 <div class="vc-info">
                   <span class="vc-count" id="vc-today">{{ $vc['today'] }}</span>
-                  <span class="vc-label">Today</span>
+                  <span class="vc-label">{{ label('lbl_today') }}</span>
                 </div>
               </div>
               <div class="vc-item">
                 <i class="fa fa-history vc-icon"></i>
                 <div class="vc-info">
                   <span class="vc-count" id="vc-yesterday">{{ $vc['yesterday'] }}</span>
-                  <span class="vc-label">Yesterday</span>
+                  <span class="vc-label">{{ label('lbl_yesterday') }}</span>
                 </div>
               </div>
               <div class="vc-item">
                 <i class="fa fa-calendar-week vc-icon"></i>
                 <div class="vc-info">
                   <span class="vc-count" id="vc-week">{{ $vc['week'] }}</span>
-                  <span class="vc-label">This Week</span>
+                  <span class="vc-label">{{ label('lbl_this_week') }}</span>
                 </div>
               </div>
               <div class="vc-item">
                 <i class="fa fa-calendar-alt vc-icon"></i>
                 <div class="vc-info">
                   <span class="vc-count" id="vc-month">{{ $vc['month'] }}</span>
-                  <span class="vc-label">This Month</span>
+                  <span class="vc-label">{{ label('lbl_this_month') }}</span>
                 </div>
               </div>
               <div class="vc-item">
                 <i class="fa fa-calendar vc-icon"></i>
                 <div class="vc-info">
                   <span class="vc-count" id="vc-year">{{ $vc['year'] }}</span>
-                  <span class="vc-label">This Year</span>
+                  <span class="vc-label">{{ label('lbl_this_year') }}</span>
                 </div>
               </div>
             </div>

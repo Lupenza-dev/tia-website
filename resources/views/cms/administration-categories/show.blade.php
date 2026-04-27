@@ -68,7 +68,7 @@
 										@foreach($members as $key => $member)
 											<tr>
 												<td>{{ $member->position }}</td>
-												<td>{{ $member->member->fullname }}</td>
+												<td>{{ $member->member?->fullname }}</td>
 												<td>{{ $member->title }}</td>
 												<td>
 													<a href="#OpenModelContainer{{ $key }}" data-toggle="modal" data-target="#OpenModelContainer{{ $key }}" class="label theme-bg2 text-white f-12">Edit</a>

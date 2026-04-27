@@ -30,7 +30,7 @@
 							<div class="card-body">
 								<div class="col-12 px-0">
 									<div class="alert alert-info" role="alert">
-										* Default Password: <b>tpsc@_678</b>
+										* Default Password: <b>TIA@_2026</b>
 									</div>
 								</div>
 								{!! Form::open(['route' => 'cms.users.create-user']) !!}

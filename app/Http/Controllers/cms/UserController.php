@@ -95,7 +95,7 @@ class UserController extends BaseController
             return Redirect::back()->withErrors($validator)->withInput();
         }
 
-        $data['password'] = bcrypt('Latra@_678');
+        $data['password'] = bcrypt('TIA@_2026');
         $user = User::create($data);
 
         if ($user) {

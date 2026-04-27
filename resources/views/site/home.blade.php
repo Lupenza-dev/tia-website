@@ -55,10 +55,10 @@
                     <div class="bg-white p-4 mb-3" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #2156a7;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h6 class="font-weight-bold mb-0" style="color: #2156a7;">
-                                <i class="fa fa-bullhorn mr-2" style="color: #149246;"></i>Announcements
+                                <i class="fa fa-bullhorn mr-2" style="color: #149246;"></i>{{ label('lbl_announcements')}}
                             </h6>
                             <a href="{{ url('announcements') }}" class="font-weight-bold" style="color: #149246; text-decoration: none; font-size: 13px;">
-                                View All <i class="fa fa-arrow-right ml-1"></i>
+                                {{ label('lbl_view_all')}} <i class="fa fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                         @foreach ($recent_announcements->take(4) as $announcement)
@@ -84,10 +84,10 @@
                     <div class="bg-white p-4 flex-grow-1" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #efe923;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h6 class="font-weight-bold mb-0" style="color: #2156a7;">
-                                <i class="fa fa-calendar-check mr-2" style="color: #efe923;"></i>Upcoming Events
+                                <i class="fa fa-calendar-check mr-2" style="color: #efe923;"></i>{{ label('lbl_events')}}
                             </h6>
                             <a href="{{ url('events') }}" class="font-weight-bold" style="color: #efe923; text-decoration: none; font-size: 13px;">
-                                View All <i class="fa fa-arrow-right ml-1"></i>
+                                {{ label('lbl_view_all')}} <i class="fa fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                         @foreach ($events->take(3) as $event)
@@ -118,10 +118,10 @@
                     <div class="bg-white h-100 p-4" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); border-top: 3px solid #149246;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h6 class="font-weight-bold mb-0" style="color: #2156a7;">
-                                <i class="fa fa-newspaper mr-2" style="color: #149246;"></i>News
+                                <i class="fa fa-newspaper mr-2" style="color: #149246;"></i>{{ label('lbl_news')}}
                             </h6>
                             <a href="{{ url('news') }}" class="font-weight-bold" style="color: #149246; text-decoration: none; font-size: 13px;">
-                                View All <i class="fa fa-arrow-right ml-1"></i>
+                                {{ label('lbl_view_all')}} <i class="fa fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                         @foreach ($news_list->take(4) as $news)
@@ -149,7 +149,7 @@
     </div>
 
     {{-- Search Program & Partners Section --}}
-    <div class="py-5" style="background: linear-gradient(135deg, #2156a7 0%, #149246 100%);">
+    <div class="py-5 search-partners-section" style="background: linear-gradient(135deg, #2156a7 0%, #149246 100%);">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-8 text-center mb-4 mb-md-0">
@@ -192,7 +192,7 @@
         }
     </style>
     {{-- Student Testimonials Section --}}
-    <div class="py-5 position-relative overflow-hidden" style="background: #CBCBCB;">
+    <div class="py-5 position-relative overflow-hidden testimonials-section" style="background: #CBCBCB;">
         {{-- Decorative background elements --}}
         <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(20,146,70,0.05);"></div>
         <div style="position: absolute; bottom: -30px; right: -30px; width: 150px; height: 150px; border-radius: 50%; background: rgba(33,86,167,0.05);"></div>

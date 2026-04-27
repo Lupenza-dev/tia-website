@@ -121,13 +121,14 @@
     /* Floating Action Buttons */
     .fab-container {
       position: fixed;
-      bottom: 2rem;
+      bottom: 5rem;
       right: 1.2rem;
       z-index: 1050;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.65rem;
+      margin-bottom: 60px !important;
     }
     .fab-btn {
       position: relative;
@@ -779,6 +780,7 @@
    <script src="{{ asset('admin/js/visitors-counter/client.min.js')}}"></script>
    <script src="{{ asset('admin/js/visitors-counter/visitors.logs.js')}}"></script>
    <script src='https://www.google.com/recaptcha/api.js'></script>
+     <script src="https://www.ega.go.tz/assets/js/announcement.min.js"></script>
 
    <script type="text/javascript">
     //  for the chatbot feedback

@@ -309,6 +309,7 @@
     </style>
 
 
+
     {{-- @if(count($quotations))
     @include('site.includes.quotes')
     @endif --}}

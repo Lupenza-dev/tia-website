@@ -27,6 +27,7 @@ use App\Models\OnlineService;
 use App\Models\SalesPoint;
 use App\Models\ProductCategory;
 use App\Models\Faq;
+use App\Models\Partner;
 use App\Models\Passenger;
 use Carbon\Carbon;
 
@@ -87,6 +88,7 @@ class HomeController extends BaseSiteController
 
         $quotations = Quotation::where('active',1)->orderBy('id', 'DESC')->limit(5)->get();
         $short_courses = ShortCourse::where('start_date','>',Carbon::now())->orderBy('id', 'ASC')->limit(7)->get();
+        $partners =Partner::where('active',1)->latest()->get();
 
         // if ($videoshow == null) {
         //     $videoshow = [];
@@ -114,7 +116,8 @@ class HomeController extends BaseSiteController
             'campuses',
             'quotations',
             'publications',
-            'short_courses'
+            'short_courses',
+            'partners'
         ));
     }
 }

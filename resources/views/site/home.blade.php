@@ -170,14 +170,9 @@
                     <h6 class="text-white font-weight-bold text-center mb-3">{{ label('lbl_partners') }}</h6>
                     <div style="overflow: hidden; background: rgba(255,255,255,0.15); border-radius: 8px; padding: 20px 0;">
                         <div style="display: flex; animation: marqueeLeft 15s linear infinite; white-space: nowrap;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 1" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 2" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 3" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 4" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 1" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 2" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 3" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
-                            <img src="{{asset('site/images/tia_logo.png')}}" alt="Partner 4" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
+                            @foreach ($partners as $partner)
+                            <img title="{{ $partner->title_en}}" src="{{ asset('uploads/partners/' . $partner->photo_url) }}" alt="{{ $partner->title_en}}" style="height: 60px; margin: 0 20px; background: #fff; padding: 8px 12px; border-radius: 6px;">
+                            @endforeach
                         </div>
                     </div>
                 </div>

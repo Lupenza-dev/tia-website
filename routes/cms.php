@@ -88,6 +88,8 @@ Route::middleware(['auth','checked','cors'])->prefix('cms')->name('cms.')->group
 
     Route::resource('quotations', 'cms\QuotationController');
 
+    Route::resource('partners', 'cms\PartnerController');
+
     Route::resource('courses', 'cms\CourseController');
 
     Route::resource('short_courses', 'cms\ShortCourseController');

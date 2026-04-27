@@ -94,6 +94,9 @@ class User extends UserAuth
         return $this->hasMany('App\Models\Quotation');
     }
 
-
+    public function partners()
+    {
+        return $this->hasMany('App\Models\Partner');
+    }
 
 }

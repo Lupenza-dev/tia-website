@@ -7,14 +7,14 @@
 					<div class="row align-items-center">
 							<div class="col-md-12">
 									<div class="page-header-title">
-											<h5 class="m-b-10">Quotation</h5>
+											<h5 class="m-b-10">Testmonials</h5>
 									</div>
 									<ul class="breadcrumb">
 											<li class="breadcrumb-item"><a href="{{ url('/cms') }}"><i class="feather icon-home"></i></a></li>
 											<li class="breadcrumb-item"><a href="javascript:">Site Contents</a></li>
 											<li class="breadcrumb-item"><a href="javascript:">Informations</a></li>
-											<li class="breadcrumb-item"><a href="{{ url('/cms/quotations') }}">{{ label('lbl_quotations') }}</a></li>
-											<li class="breadcrumb-item"><a href="javascript:">Edit Quotation</a></li>
+											<li class="breadcrumb-item"><a href="{{ url('/cms/quotations') }}">Testmonials</a></li>
+											<li class="breadcrumb-item"><a href="javascript:">Edit Testmonials</a></li>
 									</ul>
 							</div>
 					</div>
@@ -29,7 +29,7 @@
 
 					<div class="col-md-12">
 						<div class="card">
-							<div class="card-header" > <h5>Edit Quotation</h5></div>
+							<div class="card-header" > <h5>Edit Testmonials</h5></div>
 							<div class="card-body">
                					 {!! Form::model($quotation, ['route' => ['cms.quotations.update', $quotation->id], 'files' => true, 'method' => 'PATCH']) !!}
 

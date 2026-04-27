@@ -76,7 +76,7 @@
                   <li class="@php activeLink(['long_courses']) @endphp"><a href="{{route('cms.long_courses.index')}}">Long Courses</a></li>
                 @endif 
                 @if(permission('*.quotations.*'))
-                <li class="@php activeLink(['quotations']) @endphp"><a href="{{route('cms.quotations.index')}}">Quotations</a></li>
+                <li class="@php activeLink(['quotations']) @endphp"><a href="{{route('cms.quotations.index')}}">Testmonials</a></li>
                 @endif 
 
                 @if(permission('*.announcements.*'))

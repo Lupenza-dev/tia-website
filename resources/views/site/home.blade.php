@@ -211,90 +211,34 @@
             </div>
             <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                 <div class="carousel-inner">
-                    {{-- Slide 1 --}}
-                    <div class="carousel-item active">
+                    @foreach($quotations->chunk(3) as $slideIndex => $slideChunk)
+                    <div class="carousel-item @if($slideIndex == 0) active @endif">
                         <div class="row">
+                            @foreach($slideChunk as $quotation)
                             <div class="col-md-4 px-3 mb-3">
                                 <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
                                     <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
                                     <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
+                                        <img src="{{ asset('uploads/quotations/' . $quotation->photo_url) }}" alt="{{ $quotation->name_en }}" style="width: 100%; height: 100%; object-fit: cover;">
                                     </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">John Mwamba</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in Accountancy</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"TIA gave me the practical skills and confidence I needed to excel in my career. The lecturers are supportive and the environment is conducive for learning."</p>
+                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">{{ $quotation->name_en }}</h6>
+                                    <small style="color: #149246; font-weight: 600;">{{ $quotation->title_en }}</small>
+                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">{!! $quotation->content_en !!}</p>
                                 </div>
                             </div>
-                            <div class="col-md-4 px-3 mb-3">
-                                <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
-                                    <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
-                                    <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
-                                    </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">Grace Kileo</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in Procurement</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"The quality of education at TIA is outstanding. I was well prepared for the job market and landed my dream position within months of graduating."</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 px-3 mb-3">
-                                <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
-                                    <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
-                                    <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
-                                    </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">Hassan Mchome</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in IT</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"TIA's hands-on approach to teaching technology skills made all the difference. The labs and resources available are truly world-class."</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                    {{-- Slide 2 --}}
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-4 px-3 mb-3">
-                                <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
-                                    <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
-                                    <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
-                                    </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">Amina Juma</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in Human Resource</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"I am grateful for the mentorship and career guidance I received at TIA. It shaped my professional journey and opened doors I never imagined."</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 px-3 mb-3">
-                                <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
-                                    <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
-                                    <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
-                                    </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">Peter Laizer</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in Marketing</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"The practical exposure and industry connections at TIA helped me build a strong foundation. I would recommend TIA to any aspiring professional."</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4 px-3 mb-3">
-                                <div class="text-center p-4 h-100 position-relative" style="background: #fff; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); border: 1px solid #eee; transition: transform 0.3s;">
-                                    <div style="position: absolute; top: 15px; left: 20px; font-size: 40px; color: rgba(20,146,70,0.15); font-family: Georgia, serif; line-height: 1;">&ldquo;</div>
-                                    <div style="width: 85px; height: 85px; border-radius: 50%; overflow: hidden; border: 3px solid #149246; margin: 0 auto; box-shadow: 0 3px 10px rgba(20,146,70,0.2);">
-                                        <img src="{{asset('site/images/student.png')}}" alt="Student" style="width: 100%; height: 100%; object-fit: cover;">
-                                    </div>
-                                    <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">Neema Swai</h6>
-                                    <small style="color: #149246; font-weight: 600;">Diploma in Banking & Finance</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">"Studying at TIA was life-changing. The curriculum is relevant, the staff is dedicated, and the campus life is vibrant and enriching."</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="text-center mt-4">
                     <a class="d-inline-flex align-items-center justify-content-center mr-2" href="#testimonialCarousel" role="button" data-slide="prev" style="width: 40px; height: 40px; border-radius: 50%; background: #2156a7; color: #fff; font-size: 16px; text-decoration: none;">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                     <ol class="carousel-indicators d-inline-flex position-relative m-0 align-middle" style="top: auto; bottom: auto;">
-                        <li data-target="#testimonialCarousel" data-slide-to="0" class="active" style="width: 30px; height: 4px; border-radius: 2px; background-color: #149246; margin: 0 4px;"></li>
-                        <li data-target="#testimonialCarousel" data-slide-to="1" style="width: 30px; height: 4px; border-radius: 2px; background-color: #ccc; margin: 0 4px;"></li>
+                        @foreach($quotations->chunk(3) as $slideIndex => $slideChunk)
+                        <li data-target="#testimonialCarousel" data-slide-to="{{ $slideIndex }}" @if($slideIndex == 0) class="active" @endif style="width: 30px; height: 4px; border-radius: 2px; background-color: @if($slideIndex == 0) #149246 @else #ccc @endif; margin: 0 4px;"></li>
+                        @endforeach
                     </ol>
                     <a class="d-inline-flex align-items-center justify-content-center ml-2" href="#testimonialCarousel" role="button" data-slide="next" style="width: 40px; height: 40px; border-radius: 50%; background: #149246; color: #fff; font-size: 16px; text-decoration: none;">
                         <i class="fa fa-chevron-right"></i>

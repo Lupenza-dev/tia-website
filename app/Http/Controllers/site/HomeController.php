@@ -103,6 +103,7 @@ class HomeController extends BaseSiteController
 
         // echo $publicationCategory;exit;
 // dd()
+// return $quotations;
         return view("site/home", compact(
             'dg',
             'news_list',

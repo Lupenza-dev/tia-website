@@ -7,18 +7,18 @@
 					<div class="row align-items-center">
 							<div class="col-md-7">
 									<div class="page-header-title">
-											<h5 class="m-b-10">Quotations</h5>
+											<h5 class="m-b-10">Testmonials</h5>
 									</div>
 									<ul class="breadcrumb">
 											<li class="breadcrumb-item"><a href="{{ url('/cms') }}"><i class="feather icon-home"></i></a></li>
 											<li class="breadcrumb-item"><a href="javascript:">Site Contents</a></li>
 											<li class="breadcrumb-item"><a href="javascript:">Informations</a></li>
-											<li class="breadcrumb-item"><a href="javascript:">{{ label('lbl_quotations') }}</a></li>
+											<li class="breadcrumb-item"><a href="javascript:">Testmonials</a></li>
 									</ul>
 							</div>
 
 							<div class="col-md-5 text-right">
-									<a href="{{ url('/cms/quotations/create')}}" class="btn btn-primary"> <i class="feather icon-edit"></i> Create Quotation</a>
+									<a href="{{ url('/cms/quotations/create')}}" class="btn btn-primary"> <i class="feather icon-edit"></i> Create Testmonials</a>
 							</div>
 					</div>
 			</div>
@@ -32,7 +32,7 @@
 
 					<div class="col-md-12">
 						<div class="card">
-							<div class="card-header" > <h5>{{ label('lbl_quotations') }}</h5></div>
+							<div class="card-header" > <h5>Testmonials</h5></div>
 							<div class="card-body">
 								@if($quotation_lists->count() == 0)
 

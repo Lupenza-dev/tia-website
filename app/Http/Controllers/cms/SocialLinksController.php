@@ -32,7 +32,8 @@ class SocialLinksController extends BaseController {
 	        'tumblr' => 'Tumblr',
 	        'snapchat' => 'Snapchat',
 	        'Flickr' => 'Flickr',
-            'skype'=>'Skype'
+            'skype'=>'Skype',
+            'tiktok' =>'tiktok'
         ];
 
         foreach ($links as $key => $value) {

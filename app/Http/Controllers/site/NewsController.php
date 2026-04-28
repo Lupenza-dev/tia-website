@@ -31,7 +31,7 @@ class NewsController extends BaseSiteController {
 
 		//if  content not found
 		if(!$news) return view('site.default-not-found');
-
+	
 		return view('site.news.show', compact('news'));
 	}
 

@@ -116,6 +116,8 @@ Route::namespace('site')->group(function () {
         // Route::get('members', 'AdministrationController@members');
         
         Route::get('administration/{slug}', 'AdministrationController@index');
+        Route::get('administration-welcome-message/{slug}', 'AdministrationController@WelcomeMessage');
+
 
         Route::get('administration/{slug}/{id}/{ajax?}', 'AdministrationController@show');
 

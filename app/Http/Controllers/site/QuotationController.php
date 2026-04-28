@@ -6,7 +6,7 @@ use App\Models\News;
 use App\Models\Quotation;
 use Cookie;
 
-class QiotationController extends BaseSiteController {
+class QuotationController extends BaseSiteController {
 
 	/**
 	 * Display a listing of the resource.
@@ -29,6 +29,7 @@ class QiotationController extends BaseSiteController {
 	public function show($slug)
 	{
 		$quotation = Quotation::findBySlug($slug);
+		// return $quotation;
 
 		//if  content not found
 		if(!$quotation) return view('site.default-not-found');

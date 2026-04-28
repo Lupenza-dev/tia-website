@@ -15,7 +15,7 @@ class AdministrationController extends BaseSiteController {
 	{
 		$category = AdministrationCategories::findBySlug($slug);
         $member = Administration::findBySlug($id);
-
+	// return 89;
 		//if  content not found
 		if(!$member) return view('site.default-not-found');
 		
@@ -50,5 +50,11 @@ class AdministrationController extends BaseSiteController {
         $members = Administration::orderBy('position', 'DESC')->paginate(10);
 		
 		return view('site.administration.members', compact('members'));
+	}
+
+	public function WelcomeMessage($slug){
+		$message = Administration::where('slug', $slug)->first();
+		if(!$message) return view('site.default-not-found');
+		return view('site.administration.management_member', compact('message'));
 	}
 }

@@ -42,7 +42,7 @@
                         <p class="mb-3" style="font-size: 14px; line-height: 1.7; color: #555;">
                             {!! str_limit(strip_tags($dg->content), 200) !!}
                         </p>
-                        <a href="{{ url('administration/' . $dg->slug) }}" class="font-weight-bold" style="color: #149246; text-decoration: none; font-size: 14px;">
+                        <a href="{{ url('administration-welcome-message/' . $dg->slug) }}" class="font-weight-bold" style="color: #149246; text-decoration: none; font-size: 14px;">
                             Read Full Message <i class="fa fa-arrow-right ml-1"></i>
                         </a>
                     </div>
@@ -218,7 +218,8 @@
                                     </div>
                                     <h6 class="font-weight-bold mt-3 mb-0" style="color: #2156a7;">{{ $quotation->name_en }}</h6>
                                     <small style="color: #149246; font-weight: 600;">{{ $quotation->title_en }}</small>
-                                    <p style="font-size: 13px; color: #555; line-height: 1.7;">{!! $quotation->content_en !!}</p>
+                                    <div class="testimonial-content" style="font-size: 13px; color: #555; line-height: 1.7; max-height: calc(1.7em * 5); overflow: hidden; position: relative;">{!! $quotation->content_en !!}</div>
+                                    <a href="{{ route('quotations.show', $quotation->slug) }}" class="testimonial-read-more" style="font-size: 12px; color: #149246; font-weight: 600; text-decoration: none; display: block; margin-top: 4px;">Read more</a>
                                 </div>
                             </div>
                             @endforeach

@@ -79,7 +79,7 @@
                 <li class="@php activeLink(['quotations']) @endphp"><a href="{{route('cms.quotations.index')}}">Testmonials</a></li>
                 @endif 
 
-                @if(permission('*.quotations.*'))
+                @if(permission('*.partners.*'))
                 <li class="@php activeLink(['partners']) @endphp"><a href="{{route('cms.partners.index')}}">Partners</a></li>
                 @endif 
 

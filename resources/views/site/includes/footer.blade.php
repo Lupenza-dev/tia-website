@@ -84,6 +84,9 @@
               @if($social_link->title_en == 'instagram')
                 <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-instagram  px-2" aria-hidden="true"></i></a>
               @endif
+              @if($social_link->title_en == 'tiktok')
+                <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-tiktok  px-2" aria-hidden="true"></i></a>
+              @endif
             @endforeach
           </div>    
          

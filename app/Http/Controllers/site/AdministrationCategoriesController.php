@@ -11,6 +11,7 @@ use App\Models\Administration;
 class AdministrationCategoriesController extends BaseSiteController {
 
 	public function show($slug){
+		// return $slug;
 		$category = AdministrationCategories::findBySlug($slug);
 		$administration = $category->administration();
 		

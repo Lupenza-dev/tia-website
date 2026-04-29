@@ -36,7 +36,7 @@
                                  alt="{{ $dg->fullname }}"
                                  style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <h6 class="font-weight-bold mt-3 mb-1" style="color: #2156a7;">{{ $dg->fullname }}</h6>
+                        <h6 class="font-weight-bold mt-3 mb-1" style="color: #2156a7;">{{ $dg->salutation_en }} {{ $dg->fullname }}</h6>
                         <p class="text-muted mb-3" style="font-size: 13px;">{{ $dg->title }}</p>
                         <span style="font-size: 32px; line-height: 1; color: #149246; font-family: Georgia, serif;">&ldquo;</span>
                         <p class="mb-3" style="font-size: 14px; line-height: 1.7; color: #555;">

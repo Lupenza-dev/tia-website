@@ -47,7 +47,7 @@
                 </p>
               @endif
             @endif
-               @forelse($social_links as $social_link)
+            @forelse($social_links as $social_link)
               @if($social_link->title_en == 'facebook')
                 <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-facebook-f px-2" aria-hidden="true"></i></a>
               @endif
@@ -63,7 +63,7 @@
               @if($social_link->title_en == 'blog')
                 <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-blogger-b  px-2" aria-hidden="true"></i></a>
               @endif
-              @if($social_link->title_en == 'whatsapp')
+              @if(strtolower($social_link->title_en) == 'whatsapp')
                 <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-whatsapp  px-2" aria-hidden="true"></i></a>
               @endif
               @if($social_link->title_en == 'vimeo')
@@ -84,8 +84,8 @@
               @if($social_link->title_en == 'instagram')
                 <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-instagram  px-2" aria-hidden="true"></i></a>
               @endif
-              @if($social_link->title_en == 'tiktok')
-                <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-tiktok  px-2" aria-hidden="true"></i></a>
+              @if(strtolower($social_link->title_en) == 'tiktok')
+                <a href="{{ $social_link->url }}" target="_blank" rel="noopener noreferrer"><i class="fab icon fa-tiktok-f  px-2" aria-hidden="true"></i></a>
               @endif
             @endforeach
           </div>    

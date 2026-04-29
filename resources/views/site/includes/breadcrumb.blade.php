@@ -44,5 +44,5 @@ style="background-image: url({{asset("site/images/bg/banner.png")}})"
       </div>
     </div>
     <br>
-    <h5 class="d-inline-block text-primary text-uppercase bold-600 px-3 px-lg-5 py-3 my-0 rounded-top bg-white mx-lg-5"><span> @yield('page_title')</span> </h5>
+    {{-- <h5 class="d-inline-block text-primary text-uppercase bold-600 px-3 px-lg-5 py-3 my-0 rounded-top bg-white mx-lg-5" style="display: none"><span> @yield('page_title')</span> </h5> --}}
   </div>

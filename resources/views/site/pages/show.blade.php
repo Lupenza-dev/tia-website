@@ -21,11 +21,9 @@
 
             @if($page->has_sidebar == 1)
                 <div class="col-lg-8 px-0 my-2 pr-lg-5 page-content">
-                    <div class="row mx-0">
-                        <div class="col-12 px-0 mt-2">
-                            <div class="rich-text py-2">
-                                {!! $page->content !!}
-                            </div>
+                    <div style="background: #fff; border-radius: 12px; padding: 25px 30px; border: 1px solid #eee; margin-top: 12px;">
+                        <div class="rich-text" style="font-size: 15px; line-height: 1.8; color: #444;">
+                            {!! $page->content !!}
                         </div>
                     </div>
                 </div>
@@ -34,11 +32,9 @@
                 </div>
             @else
                 <div class="col-lg-12 px-0 my-2 page-content">
-                    <div class="row mx-0">
-                        <div class="col-12 px-0 mt-2">
-                            <div class="rich-text py-2">
-                                {!! $page->content !!}
-                            </div>
+                    <div style="background: #fff; border-radius: 12px; padding: 25px 30px; border: 1px solid #eee; margin-top: 12px;">
+                        <div class="rich-text" style="font-size: 15px; line-height: 1.8; color: #444;">
+                            {!! $page->content !!}
                         </div>
                     </div>
                 </div>

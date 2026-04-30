@@ -90,6 +90,14 @@ Route::middleware(['auth','checked','cors'])->prefix('cms')->name('cms.')->group
 
     Route::resource('partners', 'cms\PartnerController');
 
+    Route::resource('programs', 'cms\ProgramController');
+
+    Route::resource('program_categories', 'cms\ProgramCategoryController');
+
+    Route::resource('program_level', 'cms\ProgramLevelController');
+
+    Route::resource('departments', 'cms\DepartmentController');
+
     Route::resource('courses', 'cms\CourseController');
 
     Route::resource('short_courses', 'cms\ShortCourseController');

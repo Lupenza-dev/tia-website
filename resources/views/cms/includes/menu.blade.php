@@ -192,6 +192,34 @@
         </ul>
     </li>
     @endif    
+     
+    @if(permission(['*.program_categories.*','*.program_level.*','*.programs.*','*.departments.*']))
+    <li data-username="program categories level departments" class="nav-item ega-hasmenu @php activeLink(['program_categories','program_level','programs','departments']) @endphp">
+        <a href="javascript:" class="nav-link ">
+          <span class="ega-micon"><i class="feather icon-book-open"></i></span>
+          <span class="ega-mtext"> Programme</span>
+        </a>
+        <ul class="ega-submenu">
+
+          @if(permission('*.program_categories.*'))
+          <li class="@php activeLink(['program_categories']) @endphp"><a href="{{ url('cms/program_categories') }}">Programme Category</a></li>
+          @endif
+
+          @if(permission('*.program_level.*'))
+          <li class="@php activeLink(['program_level']) @endphp"><a href="{{ url('cms/program_level') }}"> Programme Level</a></li>
+          @endif
+
+          @if(permission('*.departments.*'))
+          <li class="@php activeLink(['departments']) @endphp"><a href="{{ url('cms/departments') }}"> Departments</a></li>
+          @endif
+
+          @if(permission('*.programs.*'))
+          <li class="@php activeLink(['programs']) @endphp"><a href="{{ url('cms/programs') }}"> Programmes</a></li>
+          @endif
+
+        </ul>
+    </li>
+    @endif    
 
     @if(permission('*.documents.*','*.document-categories.*'))
     <li data-username="documents" class="nav-item @php activeLink(['document-categories','documents']) @endphp">
